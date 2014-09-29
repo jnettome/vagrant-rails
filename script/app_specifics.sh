@@ -7,6 +7,7 @@ export PATH="${RBENV_ROOT}/bin:${PATH}"
 export PATH="${RBENV_ROOT}/shims:${PATH}"
 
 cd /vagrant
+mkdir tmp
 bundle install
 rbenv rehash
 sudo sudo -u postgres psql -1 -c "CREATE USER pgadmin WITH PASSWORD 'secret';"
